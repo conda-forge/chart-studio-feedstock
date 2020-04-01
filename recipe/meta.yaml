@@ -1,5 +1,5 @@
 {% set name = "chart-studio" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1293776553a552bb3ff918c33d70f3b0794103b8cb0ac08aad8bde1c94ee65e3
+  sha256: a17283b62470306d77060b200f13f9749c807dd15613c113d36f8d057f5c7019
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: "This package contains utilities for interfacing with Plotly's Chart Studio service"
+  summary: This package contains utilities for interfacing with Plotly's Chart Studio service
   doc_url: https://help.plot.ly/tutorials/#fundamentals
   dev_url: https://github.com/plotly/plotly.py/tree/master/packages/python/chart-studio
 
